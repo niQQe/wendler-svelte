@@ -9,6 +9,9 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
 	 */
 	depends('supabase:auth');
 
+	console.log(PUBLIC_SUPABASE_ANON_KEY);
+	console.log(PUBLIC_SUPABASE_URL);
+
 	const supabase = isBrowser()
 		? createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
 				global: {
